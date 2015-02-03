@@ -76,7 +76,7 @@ class PostgisPostgresql93 < Formula
 
     # Install extension scripts to the Postgres keg.
     # `CREATE EXTENSION postgis;` won't work if these are located elsewhere.
-    (postgres_realpath/'share/postgresql/extension').install Dir['stage/**/extension/*']
+    (postgres_realpath/'share/extension').install Dir['stage/**/extension/*']
 
     bin.install Dir['stage/**/bin/*']
     lib.install Dir['stage/**/lib/*']
